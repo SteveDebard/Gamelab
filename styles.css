@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border-bottom: solid black;
+    height: 100px;
+}
+
+.gamelab{
+    height: 80px;
+}
+.header a{
+    text-decoration: none;
+    color: black;
+}
+.listeman{
+    margin-right: 100px;
+}
+
+.hero{
+    background-image:url(https://la-tribu-electro-depot.s3.eu-west-3.amazonaws.com/wp-content/uploads/2021/12/AdobeStock_442943781_Editorial_Use_Only-scaled.jpeg);
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+   display: flex;
+   
+}
+.paragrapheimg{
+    color: white;
+    font-size: 60px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .paragrapheimg h1{
+    color: #f3d043;
+    text-align: center;
+    text-shadow: rgb(0, 0, 0) 5px 5px 5px
+  }
+  .paragrapheimg p{
+    text-shadow: rgb(3, 3, 3) 5px 5px 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+  }
+  .paragrapheimg a{
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    background-color: rgba(47, 18, 152, 0.864);
+    padding: 20px
+  }
+  
+  .benefclients p{
+    display: flex;
+    padding: 20px;
+    font-size: px;
+  }
+
+  .benefclients{
+    height: 150px;
+    background-color: #f3d043;
+  }
+
+  .gamelab{
+    padding: 10px;
+    height: 70px;
+  }
+
