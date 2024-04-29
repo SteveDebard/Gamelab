@@ -69,11 +69,12 @@
     display: flex;
     padding: 20px;
     font-size: px;
+    background-color: #f3d043;
+ 
   }
 
   .benefclients{
     height: 150px;
-    background-color: #f3d043;
   }
 
   .gamelab{
