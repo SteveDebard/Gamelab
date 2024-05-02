@@ -186,5 +186,69 @@ background-color: wheat;
 }
 
 .avis{
-  background-color: #ca9d70
+  background-color: #ca9d70;
+  
+}
+
+main {
+  margin-bottom: 0; 
+  background-color: #ca9d70; 
+  padding-bottom: 20px; 
+}
+
+footer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: rgb(27, 1, 99);
+  padding-top: 20px; 
+  padding-bottom: 20px; 
+}
+
+footer p {
+  margin: 0 10px; 
+  transition: transform 0.3s, color 0.3s; 
+  font-size: 1.5em;
+}
+
+footer p:hover {
+  color: white; 
+  transform: scale(1.2);
+}
+
+
+  .projet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+#real{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.titrerea{
+  background-color: #0d012d
+}
+
+.endroitcarte {
+  display: flex;
+  justify-content: flex-start; 
+  flex-wrap: wrap; 
+}
+
+
+#cartedefou {
+  display: flex; 
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+  align-items: center;
+}
+
+.cardtemoin {
+  flex: 0 0 48%; 
+  margin-bottom: 20px; 
+  height: 130px;
 }
