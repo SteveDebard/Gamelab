@@ -15,6 +15,7 @@
     list-style: none;
     border-bottom: solid black;
     height: 80px;
+    background-color: #f3e2a0;
 }
 
 .gamelab{
@@ -81,7 +82,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: rgba(162, 84, 6, 0.571);
+    background-color: F7C566
   }
 
   .gamelab{
@@ -96,11 +97,13 @@
     border-radius: 10px;
     height: 173px;
     box-shadow: 0 0px 4px black;
-    overflow: hidden;
-    background-image: url(https://cdn.glitch.global/34823477-3d93-4a38-aaf6-ceb2b1fd2fa9/ef88dadca13badf9418b26b15aaa431a.jpg?v=1683014991626);
-    background-size: contain;
-    background-repeat: no-repeat;
   }
+.tout img{
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+}
 
 .textecarte {
   position: absolute;
@@ -119,7 +122,7 @@
 
 .titrerea{
 
-color: white;
+color: black;
 text-align: center;
 height: 100px;
 font-size: 30px;
@@ -132,11 +135,11 @@ padding: 30px;
 }
 
 #real{
-  background-color: rgb(13, 1, 45);
+  background-color: #d6be5c
 }
 
 .temoignages{
-  background-color: rgb(13, 1, 45);
+  background-color: #DC6B19  
 }
 #titretemoin{
   color: white;
@@ -162,6 +165,7 @@ padding: 30px;
   background-size: contain;
   background-repeat: no-repeat;
 background-color: wheat;
+left: 25%;
 }
 
 .cardtemoin h4{
@@ -180,6 +184,8 @@ background-color: wheat;
 .note{
   color: yellow;
   font-size: 20px;
+  display: flex;
+  text-shadow: black 2px 2px 2px;
 }
 .projet{
   background-color: #ca9d70
@@ -200,7 +206,7 @@ footer {
   display: flex;
   justify-content: center; 
   align-items: center; 
-  background-color: rgb(27, 1, 99);
+  background-color: #DC6B19;
   padding-top: 20px; 
   padding-bottom: 20px; 
 }
@@ -230,7 +236,7 @@ footer p:hover {
 }
 
 .titrerea{
-  background-color: #0d012d
+  background-color: #DC6B19
 }
 
 .endroitcarte {
@@ -252,3 +258,4 @@ footer p:hover {
   margin-bottom: 20px; 
   height: 130px;
 }
+

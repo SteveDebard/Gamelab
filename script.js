@@ -43,89 +43,64 @@ function addServices(data) {
 
 
   data.beneficesClients.forEach(benefice => {
-    let paragraph = document.createElement("p");
-    paragraph.textContent = benefice;
-    beneficesClientsSection.appendChild(paragraph);
+    beneficesClientsSection.innerHTML += `
+     <p data-aos="fade-right" data-aos-duration=1500>${benefice}</p>
+    `
   });
 }
 
 
 function addReal(data) {
-  let realisationsSection = document.getElementById("real");
+  let realisation = document.querySelector("#real");
 
- 
-  data.realisations.forEach(realisation => {
-    addRealItem(realisationsSection, realisation);
+
+  data.realisations.forEach(element => {
+    realisation.innerHTML += `
+    <div class="tout">
+            <img src="${element.image}" alt="">
+        <div class="textecarte">
+            <h4>"${element.type}</h4>
+            <p>"${element.description}</p>
+        </div>
+    `
   });
 }
 
 
-function addRealItem(realisationsSection, realisation) {
- 
-  let card = document.createElement("div");
-  card.classList.add("tout", "flex");
-
-
-  let cardContent = `
-        <div class="textecarte">
-            <h4>${realisation.type}</h4>
-            <p>${realisation.description}</p>
-        </div>
-    `;
-
-  let image = document.createElement("img");
-  image.src = realisation.image;
-
-
-  image.style.width = "100%";
-  image.style.height = "auto";
-
-  card.appendChild(image);
-
-
-  card.innerHTML += cardContent;
-
-
-  realisationsSection.appendChild(card);
-}
-
 function addTemoignage(data) {
-    let temoinSection = document.getElementById("cartedefou");
-
-    temoinSection.innerHTML = "";
+  let commentaire = document.querySelector("#cartedefou");
 
 
-    let temoignagesValides = data.temoignagesClients.filter(isValidTemoignage);
-
-    
-    temoignagesValides.forEach(temoignage => {
-        addTemoignageItem(temoinSection, temoignage);
+  data.temoignagesClients.forEach(element => {
+    commentaire.innerHTML += `
+    <div class="cardtemoin" id="temoin">
+    <h4>${element.prenom}</h4>
+    <p class="theme">${element.typePrestation}</p>
+    <p>${element.commentaire}</p>
+    <div class="note">${ecrireStarRating(element.note)}</div>
+    </div>
+    `
     });
 }
+// Fonction qui retournera le texte a mettre dans le star rating (merci yanis pour le code)
+function ecrireStarRating(donnee){
 
-function isValidTemoignage(temoignage) {
-    return temoignage.prenom.trim() !== "" && temoignage.typePrestation.trim() !== "" && temoignage.commentaire.trim() !== "";
-}
+  let final = ""
+  // Une première boucle pour ajouter les étoiles remplies, puis une autre boucle allant jusqu'a (5 - la note) pour ajouter les étoiles vides
+  for (let i = 0; i < donnee; i++){
 
-function addTemoignageItem(temoinSection, temoignage) {
- 
-    let card = document.createElement("div");
-    card.classList.add("cardtemoin");
+      final += `<p class="star">★</p>`
 
-   
-    let cardContent = `
-        <h4>${temoignage.prenom}</h4>
-        <p class="theme">${temoignage.typePrestation}</p>
-        <p>${temoignage.commentaire}</p>
-        <p class="note">★ ★ ★ ★ ☆</p>
-    `;
+  }
+  for (let i = 0; i < 5 - donnee; i++){
+
+      final += `<p class="star">☆</p>`
+
+  }
 
 
-    card.innerHTML = cardContent;
-
-    temoinSection.appendChild(card);
-}
-
+  return final
+  }
 
   
   
